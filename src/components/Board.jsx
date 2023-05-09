@@ -13,7 +13,7 @@ export default function Board() {
     setCardData(shuffledData);
   }, []);
   const [cardData, setCardData] = useState([]);
-  const [selectedCardIndex, setSelectedCardIndex] = useState([]);
+  const [selectedCardIndex, setSelectedCardIndex] = useState([12]);
   let bingo;
 
   bingo = bingoDone(selectedCardIndex);
@@ -40,6 +40,7 @@ export default function Board() {
         {cardData.map((data, index) => (
           <BingoCard
             key={data.id}
+            id={data.id}
             text={data.text}
             number={index}
             onSelectCard={setSelectedCardIndex}

@@ -1,18 +1,24 @@
 import { Card } from "antd";
 import { useState } from "react";
 
-export default function BingoCard({ text, number, onSelectCard, cardArray }) {
+export default function BingoCard({
+  text,
+  id,
+  number,
+  onSelectCard,
+  cardArray,
+}) {
   const [cardStyle, setStyle] = useState("bingo-card");
   return (
     <Card
       extra={number !== 0 ? number : "0"}
       bordered={true}
       headStyle={{ minHeight: 10 }}
-      className={cardStyle}
+      className={id === 12 ? "selected-card" : cardStyle}
       bodyStyle={{ padding: 5 }}
       hoverable={true}
       onClick={() => {
-        if (cardArray.includes(number)) {
+        if (cardArray.includes(number) && id !== 12) {
           setStyle("bingo-card");
           const removeCard = cardArray.filter(function (value) {
             return value !== number;
@@ -24,7 +30,7 @@ export default function BingoCard({ text, number, onSelectCard, cardArray }) {
         }
       }}
     >
-      <p class="overflow-ellipsis">{text}</p>
+      <p className="overflow-ellipsis">{text}</p>
     </Card>
   );
 }
