@@ -24,7 +24,7 @@ export default function BingoCard({ text, number, onSelectCard, cardArray }) {
         }
       }}
     >
-      {text}
+      <p class="overflow-ellipsis">{text}</p>
     </Card>
   );
 }

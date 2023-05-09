@@ -1,4 +1,4 @@
-export default function bingoDone(selectedCardIndex) {
+export default function bingoDone(selectedCardIndex, stopConfetti) {
   let bingo;
   if (
     selectedCardIndex.includes(0) &&

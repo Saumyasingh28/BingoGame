@@ -30,7 +30,12 @@ export default function Board() {
         }}
       >
         {bingo && (
-          <Confetti width={window.innerWidth} height={window.innerHeight} />
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            recycle={false}
+            numberOfPieces={500}
+          />
         )}
         {cardData.map((data, index) => (
           <BingoCard
