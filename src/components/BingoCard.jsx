@@ -24,6 +24,7 @@ export default function BingoCard({
     if (newbingoCount !== oldBingoCount) {
       setOldBingoCount(newbingoCount);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardArray]);
   return (
     <>
