@@ -14,7 +14,7 @@ export default function BingoCard({
   const [oldBingoCount, setOldBingoCount] = useState(0);
   const [confetti, setConfetti] = useState(false);
   let newbingoCount = bingoDone(cardArray);
-  console.log(oldBingoCount, newbingoCount, "values");
+
   useEffect(() => {
     if (newbingoCount > oldBingoCount) {
       setConfetti(true);
@@ -33,7 +33,7 @@ export default function BingoCard({
           width={window.innerWidth}
           height={window.innerHeight}
           recycle={false}
-          numberOfPieces={500}
+          numberOfPieces={300}
         />
       )}
       <Card
