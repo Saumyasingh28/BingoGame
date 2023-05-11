@@ -1,5 +1,5 @@
-export default function bingoDone(selectedCardIndex, stopConfetti) {
-  let bingo;
+export default function bingoDone(selectedCardIndex) {
+  let result = 0;
   if (
     selectedCardIndex.includes(0) &&
     selectedCardIndex.includes(5) &&
@@ -7,7 +7,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(15) &&
     selectedCardIndex.includes(20)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(1) &&
@@ -16,7 +16,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(16) &&
     selectedCardIndex.includes(21)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(2) &&
@@ -25,7 +25,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(17) &&
     selectedCardIndex.includes(22)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(3) &&
@@ -34,7 +34,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(18) &&
     selectedCardIndex.includes(23)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(4) &&
@@ -43,7 +43,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(19) &&
     selectedCardIndex.includes(24)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(0) &&
@@ -52,7 +52,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(18) &&
     selectedCardIndex.includes(24)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(4) &&
@@ -61,7 +61,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(16) &&
     selectedCardIndex.includes(20)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(0) &&
@@ -70,7 +70,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(3) &&
     selectedCardIndex.includes(4)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(5) &&
@@ -79,7 +79,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(8) &&
     selectedCardIndex.includes(9)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(10) &&
@@ -88,7 +88,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(13) &&
     selectedCardIndex.includes(14)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(15) &&
@@ -97,7 +97,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(18) &&
     selectedCardIndex.includes(19)
   ) {
-    bingo = true;
+    result++;
   }
   if (
     selectedCardIndex.includes(20) &&
@@ -106,7 +106,7 @@ export default function bingoDone(selectedCardIndex, stopConfetti) {
     selectedCardIndex.includes(24) &&
     selectedCardIndex.includes(25)
   ) {
-    bingo = true;
+    result++;
   }
-  return bingo;
+  return result;
 }

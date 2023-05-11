@@ -2,10 +2,10 @@ import { Space } from "antd";
 import BingoCard from "./BingoCard";
 import { useState, useEffect } from "react";
 import React from "react";
-import Confetti from "react-confetti";
+//import Confetti from "react-confetti";
 import componentData from "../data.json";
 import shuffleArray from "../utils/ShuffleArray";
-import bingoDone from "../utils/BingoDone";
+//import bingoDone from "../utils/BingoDone";
 
 export default function Board() {
   useEffect(() => {
@@ -14,9 +14,9 @@ export default function Board() {
   }, []);
   const [cardData, setCardData] = useState([]);
   const [selectedCardIndex, setSelectedCardIndex] = useState([12]);
-  let bingo;
+  //   let bingo;
 
-  bingo = bingoDone(selectedCardIndex);
+  //   bingo = bingoDone(selectedCardIndex);
 
   return (
     <div>
@@ -29,14 +29,14 @@ export default function Board() {
           justifyContent: "center",
         }}
       >
-        {bingo && (
+        {/* {bingo && (
           <Confetti
             width={window.innerWidth}
             height={window.innerHeight}
             recycle={false}
             numberOfPieces={500}
           />
-        )}
+        )} */}
         {cardData.map((data, index) => (
           <BingoCard
             key={data.id}
