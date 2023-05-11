@@ -1,111 +1,48 @@
-export default function bingoDone(selectedCardIndex) {
+export default function bingoDone(selectedCardIndex, boardSize) {
   let result = 0;
-  if (
-    selectedCardIndex.includes(0) &&
-    selectedCardIndex.includes(5) &&
-    selectedCardIndex.includes(10) &&
-    selectedCardIndex.includes(15) &&
-    selectedCardIndex.includes(20)
-  ) {
+  let i, j;
+  for (i = 0; i < boardSize * boardSize; i += boardSize) {
+    let flag = true;
+    for (j = i; j < i + boardSize; j++) {
+      if (!selectedCardIndex.includes(j)) {
+        flag = false;
+      }
+    }
+    if (flag) {
+      result++;
+    }
+  }
+  for (i = 0; i < boardSize; i++) {
+    let flag = true;
+    for (j = i; j < i + boardSize * boardSize; j += boardSize) {
+      if (!selectedCardIndex.includes(j)) {
+        flag = false;
+      }
+    }
+    if (flag) {
+      result++;
+    }
+  }
+  let flag = true;
+  for (i = 0; i < boardSize * boardSize; i = i + boardSize + 1) {
+    if (!selectedCardIndex.includes(i)) {
+      flag = false;
+    }
+  }
+  if (flag) {
     result++;
   }
-  if (
-    selectedCardIndex.includes(1) &&
-    selectedCardIndex.includes(6) &&
-    selectedCardIndex.includes(11) &&
-    selectedCardIndex.includes(16) &&
-    selectedCardIndex.includes(21)
+  flag = true;
+  for (
+    i = boardSize - 1;
+    i < boardSize * boardSize - 1;
+    i = i + boardSize - 1
   ) {
-    result++;
+    if (!selectedCardIndex.includes(i)) {
+      flag = false;
+    }
   }
-  if (
-    selectedCardIndex.includes(2) &&
-    selectedCardIndex.includes(7) &&
-    selectedCardIndex.includes(12) &&
-    selectedCardIndex.includes(17) &&
-    selectedCardIndex.includes(22)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(3) &&
-    selectedCardIndex.includes(8) &&
-    selectedCardIndex.includes(13) &&
-    selectedCardIndex.includes(18) &&
-    selectedCardIndex.includes(23)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(4) &&
-    selectedCardIndex.includes(9) &&
-    selectedCardIndex.includes(14) &&
-    selectedCardIndex.includes(19) &&
-    selectedCardIndex.includes(24)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(0) &&
-    selectedCardIndex.includes(6) &&
-    selectedCardIndex.includes(12) &&
-    selectedCardIndex.includes(18) &&
-    selectedCardIndex.includes(24)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(4) &&
-    selectedCardIndex.includes(8) &&
-    selectedCardIndex.includes(12) &&
-    selectedCardIndex.includes(16) &&
-    selectedCardIndex.includes(20)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(0) &&
-    selectedCardIndex.includes(1) &&
-    selectedCardIndex.includes(2) &&
-    selectedCardIndex.includes(3) &&
-    selectedCardIndex.includes(4)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(5) &&
-    selectedCardIndex.includes(6) &&
-    selectedCardIndex.includes(7) &&
-    selectedCardIndex.includes(8) &&
-    selectedCardIndex.includes(9)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(10) &&
-    selectedCardIndex.includes(11) &&
-    selectedCardIndex.includes(12) &&
-    selectedCardIndex.includes(13) &&
-    selectedCardIndex.includes(14)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(15) &&
-    selectedCardIndex.includes(16) &&
-    selectedCardIndex.includes(17) &&
-    selectedCardIndex.includes(18) &&
-    selectedCardIndex.includes(19)
-  ) {
-    result++;
-  }
-  if (
-    selectedCardIndex.includes(20) &&
-    selectedCardIndex.includes(21) &&
-    selectedCardIndex.includes(23) &&
-    selectedCardIndex.includes(24) &&
-    selectedCardIndex.includes(25)
-  ) {
+  if (flag) {
     result++;
   }
   return result;

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import bingoDone from "../utils/BingoDone";
 import Confetti from "react-confetti";
 
+const boardSize = 5;
+
 export default function BingoCard({
   text,
   id,
@@ -13,7 +15,7 @@ export default function BingoCard({
   const [cardStyle, setStyle] = useState("bingo-card");
   const [oldBingoCount, setOldBingoCount] = useState(0);
   const [confetti, setConfetti] = useState(false);
-  let newbingoCount = bingoDone(cardArray);
+  let newbingoCount = bingoDone(cardArray, boardSize);
 
   useEffect(() => {
     if (newbingoCount > oldBingoCount) {
