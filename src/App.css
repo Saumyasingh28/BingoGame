@@ -38,17 +38,7 @@
 }
 
 .overflow-ellipsis {
-  text-overflow: ellipsis;
-  cursor: pointer;
-  word-break: break-all;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.overflow-ellipsis:hover {
-  overflow: visible;
-  white-space: normal;
-  height: auto;
+  word-wrap: break-word;
 }
 
 .bingo-card {
@@ -60,100 +50,127 @@
 }
 
 @media only screen and (min-width: 300px) {
-  /* For desktop: */
+  .bingo-card,
+  .selected-card {
+    width: 60px;
+    height: 120px;
+    font-size: x-small;
+  }
+}
+
+@media only screen and (min-width: 360px) {
   .bingo-card,
   .selected-card {
     width: 70px;
-    height: 150px;
+    height: 120px;
+    font-size: x-small;
   }
 }
 
 @media only screen and (min-width: 420px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 80px;
-    height: 140px;
+    height: 120px;
+    font-size: x-small;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .bingo-card,
+  .selected-card {
+    width: 85px;
+    height: 120px;
+    font-size: x-small;
   }
 }
 
 @media only screen and (min-width: 490px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 90px;
-    height: 140px;
+    height: 120px;
+    font-size: x-small;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .bingo-card,
+  .selected-card {
+    width: 100px;
+    height: 120px;
+    font-size: x-small;
   }
 }
 
 @media only screen and (min-width: 550px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 110px;
     height: 130px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 650px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 130px;
-    height: 100px;
+    height: 110px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 150px;
-    height: 90px;
+    height: 110px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 180px;
-    height: 90px;
+    height: 110px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 1050px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 190px;
-    height: 90px;
+    height: 110px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 1100px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 210px;
-    height: 90px;
+    height: 100px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 1250px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 250px;
-    height: 90px;
+    height: 100px;
+    font-size: small;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  /* For desktop: */
   .bingo-card,
   .selected-card {
     width: 250px;
-    height: 90px;
+    height: 100px;
+    font-size: small;
   }
 }
