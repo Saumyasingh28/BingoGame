@@ -16,7 +16,7 @@ export default function BingoCard({
   const [oldBingoCount, setOldBingoCount] = useState(0);
   const [confetti, setConfetti] = useState(false);
   let newbingoCount = bingoDone(cardArray, boardSize);
-
+  console.log("testing");
   useEffect(() => {
     if (newbingoCount > oldBingoCount) {
       setConfetti(true);
